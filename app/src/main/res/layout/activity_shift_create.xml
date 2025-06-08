@@ -4,19 +4,55 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center">
+    android:padding="8dp">
 
+    <!-- 自動作成ボタン -->
     <Button
         android:id="@+id/btnAutoCreateShift"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="シフト自動作成" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewShift"
+    <!-- 横並びに 名前固定列 ＋ 横スクロール列 -->
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:paddingTop="16dp" />
+        android:layout_height="match_parent">
 
+        <!-- 名前固定列 -->
+        <LinearLayout
+            android:id="@+id/layoutNameLabels"
+            android:orientation="vertical"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="#DDDDDD" />
+
+        <!-- 横スクロールするエリア -->
+        <HorizontalScrollView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <!-- 時間ラベル -->
+                <LinearLayout
+                    android:id="@+id/layoutTimeLabels"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#EEEEEE" />
+
+                <!-- シフト表 -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewShift"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
 </LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <!-- 名前ラベル（固定部分） -->
+        <TextView
+            android:id="@+id/textViewShiftName"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="名前"
+            android:padding="8dp"
+            android:textSize="16sp" />
+
+        <!-- シフトマス（スクロールする部分） -->
+        <jp.ac.gifu_u.info.onishi.shiftscheduler.SyncScrollView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/layoutShiftSlots"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </jp.ac.gifu_u.info.onishi.shiftscheduler.SyncScrollView>
+
+    </LinearLayout>
+
+</HorizontalScrollView>
