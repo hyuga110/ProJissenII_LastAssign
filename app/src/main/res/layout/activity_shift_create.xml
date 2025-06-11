@@ -6,11 +6,27 @@
     android:orientation="vertical"
     android:gravity="center">
 
+
     <Button
         android:id="@+id/btnAutoCreateShift"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="シフト自動作成" />
+
+    <!-- 時間ラベル -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/timeLabels"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="4dp">
+        </LinearLayout>
+
+    </HorizontalScrollView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewShift"
