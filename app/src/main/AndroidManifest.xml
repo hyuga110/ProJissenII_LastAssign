@@ -9,21 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ShiftScheduler">
-
+        <activity
+            android:name=".HopeEditActivity"
+            android:exported="false" />
         <!-- 最初に起動するActivity（ホーム画面） -->
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- ホームからボタンで遷移できる画面 -->
+        </activity> <!-- ホームからボタンで遷移できる画面 -->
         <activity android:name=".WorkerListActivity" />
         <activity android:name=".ShiftCreateActivity" />
         <activity android:name=".SavedShiftListActivity" />
-
     </application>
 
 </manifest>

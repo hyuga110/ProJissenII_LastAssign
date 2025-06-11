@@ -10,6 +10,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     private Button btnWorkerInfo;
+    private Button buttonHopeEdit;
     private Button btnCreateShift;
     private Button btnSavedData;
 
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         //ボタンをIDで取得
         btnWorkerInfo = findViewById(R.id.btnWorkerInfo);
+        buttonHopeEdit = findViewById(R.id.buttonHopeEdit);
         btnCreateShift = findViewById(R.id.btnCreateShift);
         btnSavedData = findViewById(R.id.btnSavedData);
 
@@ -31,6 +33,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        buttonHopeEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, HopeEditActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         btnCreateShift.setOnClickListener(new View.OnClickListener() {
             @Override

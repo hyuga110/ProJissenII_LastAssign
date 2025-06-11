@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">ShiftScheduler</string>
+
+    <!-- 職種の選択肢 -->
+    <string-array name="worker_types">
+        <item>アルバイト</item>
+        <item>パート</item>
+        <item>正社員</item>
+    </string-array>
+
+    <string name="hope_table_title">ここに「%1$s」の希望表を作る</string>
 </resources>

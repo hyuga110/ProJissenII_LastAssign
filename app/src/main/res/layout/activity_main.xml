@@ -15,6 +15,13 @@
         android:layout_marginBottom="16dp"/>
 
     <Button
+        android:id="@+id/buttonHopeEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="シフト希望表"
+        android:layout_marginBottom="16dp" />
+
+    <Button
         android:id="@+id/btnCreateShift"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,6 +32,6 @@
         android:id="@+id/btnSavedData"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="保存データ"/>
+        android:text="シフト保存データ"/>
 
 </LinearLayout>
